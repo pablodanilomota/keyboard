@@ -1,25 +1,34 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 
 /**
- * Hook.
+ * Hooks.
  */
+import { useHistory } from 'react-router-dom'
+
+/**
+ * Context.
+ */
+import { KeyboardContext } from '../../Context/components/Context'
+
 export const useTime = () => {
   /**
-   * States.
+   * Hooks.
    */
-  const [time, setTime] = useState({ initialTime: 60, currentTime: 60 })
+  const { push } = useHistory()
+  const { setTime, time } = useContext(KeyboardContext)
 
   const handleTime = () =>
     setTimeout(() => {
-      if (time.currentTime === 0) return
+      if (time.currentTime === 0) return push('/result')
 
-      const timeToChange =
-        time.initialTime === time.currentTime
-          ? time.initialTime
-          : time.currentTime
-
-      setTime({ initialTime: 60, currentTime: timeToChange - 1 })
+      setTime({
+        initialTime: 60,
+        currentTime: time.currentTime - 1
+      })
     }, 1000)
 
-  return { handleTime, time }
+  return {
+    time,
+    handleTime
+  }
 }

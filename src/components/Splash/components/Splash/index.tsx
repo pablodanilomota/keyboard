@@ -3,7 +3,7 @@ import BarLoader from 'react-spinners/BarLoader'
 /**
  * Hooks.
  */
-// import { useSplash } from '../../hooks/useSplash'
+import { useSplash } from '../../hooks/useSplash'
 
 /**
  * Styles.
@@ -17,7 +17,7 @@ export function Splash() {
   /**
    * Hooks.
    */
-  // useSplash()
+  useSplash()
 
   /**
    * JSX.

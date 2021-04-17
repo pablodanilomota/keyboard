@@ -2,15 +2,14 @@
  * Components.
  */
 import { FullPage } from '../../components/Layout/components/FullPage'
-import { Splash as SplashScreen } from '../../components/Splash/components/Splash'
 
 /**
  * JSX.
  */
-export function Splash() {
+export function Result() {
   return (
     <FullPage>
-      <SplashScreen />
+      <div>acabooooooooooou</div>
     </FullPage>
   )
 }

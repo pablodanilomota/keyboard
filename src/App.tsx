@@ -1,5 +1,13 @@
 import React from 'react'
 
+/**
+ * Context.
+ */
+import { Context } from './components/Context/components/Context'
+
+/**
+ * Routes.
+ */
 import { Routes } from './Routes'
 
 /**
@@ -9,11 +17,11 @@ import { GlobalStyles } from './styles/GlobalStyles'
 
 function App() {
   return (
-    <>
+    <Context>
       <Routes />
 
       <GlobalStyles />
-    </>
+    </Context>
   )
 }
 

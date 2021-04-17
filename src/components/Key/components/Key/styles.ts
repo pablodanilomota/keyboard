@@ -1,14 +1,22 @@
 import styled from 'styled-components'
+import { darken } from 'polished'
 
-export const Container = styled.div`
+/**
+ * Type definitions.
+ */
+type Props = {
+  color: string
+}
+
+export const Container = styled.div<Props>`
   width: 300px;
   height: 300px;
   display: flex;
   align-items: center;
   border-radius: 50px;
   justify-content: center;
-  background-color: #68ecb8;
-  border: 16px solid #4bab86;
+  background-color: ${({ color }) => color};
+  border: 16px solid ${({ color }) => `${darken(0.2, color)}`};
 `
 
 export const Key = styled.span`
