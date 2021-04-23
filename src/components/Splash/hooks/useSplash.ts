@@ -38,9 +38,11 @@ export const useSplash = () => {
       randomLetter: letter,
       randomColor: randomizedColor
     })
-  }, [])
+  }, [randomizeLetter, setRandomInformations])
 
-  setTimeout(() => {
+  const handleClick = () => {
     push('/keyboard')
-  }, 3000)
+  }
+
+  return { handleClick }
 }

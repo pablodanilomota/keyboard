@@ -1,6 +1,7 @@
 /**
  * Components.
  */
+import { Results } from '../../components/Result/components/Results'
 import { FullPage } from '../../components/Layout/components/FullPage'
 
 /**
@@ -9,7 +10,7 @@ import { FullPage } from '../../components/Layout/components/FullPage'
 export function Result() {
   return (
     <FullPage>
-      <div>acabooooooooooou</div>
+      <Results />
     </FullPage>
   )
 }
