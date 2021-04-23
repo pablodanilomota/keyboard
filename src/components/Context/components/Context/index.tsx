@@ -18,9 +18,9 @@ type ContextType = {
   time: Time
   hits: number
   errors: number
-  setHits: () => void
+  setHits: (value?: number) => void
   setTime: (time: Time) => void
-  setErrors: () => void
+  setErrors: (value?: number) => void
   randomInformations?: RandomInformations
   setRandomInformations: (randomInformations: RandomInformations) => void
 }
@@ -64,8 +64,8 @@ export function Context({ children }: Props) {
    * Component functions.
    */
   const setTime = (time: Time) => setTimeValue(time)
-  const setHits = () => setHitsValue(hits + 1)
-  const setErrors = () => setErrorsValue(errors + 1)
+  const setHits = (value?: number) => setHitsValue((value || hits) + 1)
+  const setErrors = (value?: number) => setErrorsValue((value || errors) + 1)
   const setRandomInformations = (randomInformations: RandomInformations) =>
     setRandomInformationsValue(randomInformations)
 

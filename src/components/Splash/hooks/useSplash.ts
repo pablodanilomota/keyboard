@@ -32,13 +32,13 @@ export const useSplash = () => {
     const colors = Object.keys(COLORS)
 
     const randomizedColor =
-      COLORS[colors[Math.floor(Math.random() * colors.length - 1)]]
+      COLORS[colors[Math.floor(Math.random() * colors.length)]]
 
     setRandomInformations({
       randomLetter: letter,
       randomColor: randomizedColor
     })
-  }, [randomizeLetter, setRandomInformations])
+  }, [setRandomInformations, randomizeLetter])
 
   const handleClick = () => {
     push('/keyboard')

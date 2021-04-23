@@ -25,10 +25,10 @@ export function Points() {
   return (
     <Container>
       <Point>
-        Acertos: <ColoredPoint color="#68ecb8">{hits}</ColoredPoint>
+        Hits: <ColoredPoint color="#68ecb8">{hits}</ColoredPoint>
       </Point>
       <Point>
-        Erros: <ColoredPoint color="#ec687a">{errors}</ColoredPoint>
+        Errors: <ColoredPoint color="#ec687a">{errors}</ColoredPoint>
       </Point>
     </Container>
   )

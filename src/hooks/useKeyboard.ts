@@ -27,10 +27,10 @@ export const useKeyboard = () => {
    */
   const { randomizeLetter } = useRandom()
   const {
-    setRandomInformations,
-    setErrors,
     setHits,
-    randomInformations
+    setErrors,
+    randomInformations,
+    setRandomInformations
   } = useContext(KeyboardContext)
 
   const keyHandler = ({ key }: Props) => {
@@ -44,7 +44,7 @@ export const useKeyboard = () => {
     const colors = Object.keys(COLORS)
 
     const randomizedColor =
-      COLORS[colors[Math.floor(Math.random() * colors.length - 1)]]
+      COLORS[colors[Math.floor(Math.random() * colors.length)]]
 
     /**
      * Randomize.
